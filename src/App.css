@@ -1,0 +1,18 @@
+.img {
+    height: 300px;
+    width: 300px;
+    background-image: url(./IMG_9500.jpeg);
+    background-position: center;
+    background-size: 75%;
+    border-radius: 50%;
+    box-shadow:
+    0 0 0 10px #fc6986,
+    0 0 0 15px rgb(70, 30, 82);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.table-new {
+    margin-top: 30px !important;
+}
