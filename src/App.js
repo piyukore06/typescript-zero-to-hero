@@ -1,9 +1,16 @@
 import { Deck, Slide, Text, Heading, OrderedList, ListItem, CodePane, Link, Table, TableRow, TableCell } from 'spectacle';
 import './App.css';
-
+const theme = {
+  colors: {
+    primary: '#fff',
+    secondary: '#f5f5f5',
+    tertiary: '#705697AA'
+  },
+  fonts: 'Quicksand'
+}
 function App() {
   return (
-    <Deck>
+    <Deck theme={theme}>
       <Slide>
         <Heading>TypeScript: Zero to Hero</Heading>
         <Table className="table-new">
@@ -40,7 +47,7 @@ function App() {
         <Heading>Union types 🤔</Heading>
         <CodePane
           language="javascript"
-          theme="solarizedlight"
+          theme="duotoneLight"
         >
           {`
       function padLeft(value: string, padding: any) {
@@ -60,7 +67,7 @@ function App() {
         <Heading>Union types 💡</Heading>
         <CodePane
           language="javascript"
-          theme="solarizedlight"
+          theme="duotoneLight"
         >
           {`
       function padLeft(value: string, padding: number | string) {
@@ -80,7 +87,7 @@ function App() {
         <Heading>Nullable types 🤔</Heading>
         <CodePane
           language="javascript"
-          theme="solarizedlight"
+          theme="duotoneLight"
         >
           {`
   interface Member {
@@ -100,7 +107,7 @@ function App() {
         <Heading>Discriminated Unions 🤔</Heading>
         <CodePane
           language="javascript"
-          theme="solarizedlight"
+          theme="duotoneLight"
         >
           {`
 type NetworkState = {
@@ -132,7 +139,7 @@ function logger(state: NetworkState) {
         <Heading>Discriminated Unions 💡</Heading>
         <CodePane
           language="javascript"
-          theme="solarizedlight"
+          theme="duotoneLight"
         >
           {`
 type NetworkLoadingState = {
@@ -177,7 +184,7 @@ function logger(state: NetworkState) {
         <Heading>Generic Types 🤔</Heading>
         <CodePane
           language="javascript"
-          theme="solarizedlight"
+          theme="duotoneLight"
         >
           {`
 class AnyList {
@@ -213,7 +220,7 @@ userList.add(new User('Jamie'));
 
         <CodePane
           language="javascript"
-          theme="solarizedlight"
+          theme="duotoneLight"
         >
           {`
 class TypedList<T> {
@@ -248,7 +255,7 @@ userList.add(new User('Jamie'));
         <Heading>Keyof Types 🤔</Heading>
         <CodePane
           language="javascript"
-          theme="solarizedlight"
+          theme="duotoneLight"
         >
           {`
 
@@ -270,7 +277,7 @@ function getProperty(obj: User, key: string) {
       <Slide>
         <Heading>Keyof Types 💡</Heading>
         <CodePane language="javascript"
-          theme="solarizedlight">
+          theme="duotoneLight">
           {`
     interface User {
       firstName: string;
@@ -291,7 +298,7 @@ function getProperty(obj: User, key: string) {
       <Slide>
         <Heading>Tuple Types 🤔</Heading>
         <CodePane language="javascript"
-          theme="solarizedlight">{`
+          theme="duotoneLight">{`
         type SuccessData = {
             success: true;
             response: {};
@@ -321,7 +328,7 @@ function getProperty(obj: User, key: string) {
       <Slide>
         <Heading>Tuple Types 💡</Heading>
         <CodePane language="javascript"
-          theme="solarizedlight">{`
+          theme="duotoneLight">{`
       type SuccessData = {
           success: true;
           response: {};
@@ -350,7 +357,7 @@ function getProperty(obj: User, key: string) {
       <Slide>
         <Heading>Type Predicates / User Defined Type Guards 🤔</Heading>
         <CodePane language="javascript"
-          theme="solarizedlight">{`
+          theme="duotoneLight">{`
     interface Cat {
       numberOfLives: number;
     }
@@ -369,7 +376,7 @@ function getProperty(obj: User, key: string) {
       <Slide>
         <Heading>Type Predicates / User Defined Type Guards 💡</Heading>
         <CodePane language="javascript"
-          theme="solarizedlight">{`
+          theme="duotoneLight">{`
     interface Cat {
       kind: 'cat';
       numberOfLives: number;
@@ -395,7 +402,7 @@ function getProperty(obj: User, key: string) {
       <Slide>
         <Heading>Utility / Mapped types 🤔</Heading>
         <CodePane language="javascript"
-          theme="solarizedlight">{`
+          theme="duotoneLight">{`
     interface Todo {
       title: string;
       description: string;
@@ -412,7 +419,7 @@ function getProperty(obj: User, key: string) {
       <Slide>
         <Heading>Utility / Mapped types 💡</Heading>
         <CodePane language="javascript"
-          theme="solarizedlight">{`
+          theme="duotoneLight">{`
     interface Todo {
       title: string;
       description: string;
@@ -431,7 +438,7 @@ function getProperty(obj: User, key: string) {
       <Slide>
         <Heading>Inferred Types</Heading>
         <CodePane language="javascript"
-          theme="solarizedlight">{`
+          theme="duotoneLight">{`
 type VerticalAlignment = "top" | "middle" | "bottom";
 type HorizontalAlignment = "left" | "center" | "right";
 
